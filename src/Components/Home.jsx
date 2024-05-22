@@ -17,9 +17,10 @@ const Home = () => {
     { year: "2021", data: { totalJobs: 0, totalSalary: 0, jobTitile: {} } },
     { year: "2020", data: { totalJobs: 0, totalSalary: 0, jobTitile: {} } },
   ]);
+  const [dataTemp, setDataTemp] = useState(newData);
   const handleData = (currentData) => {
     currentData?.forEach((obj) => {
-      newData.map((item) => {
+      dataTemp.map((item) => {
         if (obj.work_year === item.year) {
           item.data.totalJobs = item.data.totalJobs + 1;
           item.data.totalSalary = item.data.totalSalary + parseInt(obj.salary);
@@ -46,7 +47,7 @@ const Home = () => {
         const parsedData = Papa.parse(csv, { header: true }).data;
         setData(parsedData);
         handleData(parsedData);
-        console.log(newData);
+        setNewData(dataTemp);
       } catch (error) {
         console.log(error);
       }
