@@ -29,6 +29,7 @@ const Home = () => {
           } else {
             item.data.jobTitile[obj.job_title] = 1;
           }
+          return item;
         }
       });
     });
@@ -43,7 +44,6 @@ const Home = () => {
         const decoder = new TextDecoder("utf-8");
         const csv = decoder.decode(result.value);
         const parsedData = Papa.parse(csv, { header: true }).data;
-        console.log(parsedData);
         setData(parsedData);
         handleData(parsedData);
         console.log(newData);
