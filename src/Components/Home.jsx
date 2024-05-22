@@ -86,7 +86,7 @@ const Home = () => {
     setSearch("");
   };
   return (
-    <div className="md:grid md:grid-cols-2 sm:grid sm:grid-row-2  gap-1 h-screen pt-10 md:overflow-hidden">
+    <div className="md:grid md:grid-cols-2 sm:grid sm:grid-row-2  gap-1 h-screen pt-10 ">
       <div className="w-full h-14  bg-gradient-to-r from-blue-600  to-sky-300 fixed top-0 flex items-center justify-center">
         <h1 className="text-3xl text-white  font-bold">Floqer's Assignment</h1>
       </div>

@@ -59,11 +59,11 @@ const LineGraph = ({ newData }) => {
           Graphs
         </h1>
       </div>
-      <div className="w-full h-screen grid grid-rows-2 grid-col-1 ">
+      <div className="w-full h-screen grid grid-rows-2 grid-col-1 gap-0 ">
         <div className="w-3/4 h-full m-5">
           <Line data={salaries} />
         </div>
-        <div className="w-3/4 h-full  m-5">
+        <div className="w-3/4 h-3/4  m-5 mb-15 pb-5">
           <Bar data={Jobs} />
         </div>
       </div>
