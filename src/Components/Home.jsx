@@ -122,7 +122,7 @@ const Home = () => {
                         : "rgba(19 , 76 , 246, 0.59)",
                   }}
                 >
-                  <td className="pl-6 p-3 ">{item.year}</td>
+                  <td className="pl-6 p-3 underline ">{item.year}</td>
                   <td className="pl-10 ">{item.data.totalJobs}</td>
                   <td className="pl-14">
                     {parseFloat(

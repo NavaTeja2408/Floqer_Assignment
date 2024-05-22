@@ -1,5 +1,5 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,6 +9,8 @@ import {
   Title,
   Tooltip,
   Legend,
+  BarController,
+  BarElement,
 } from "chart.js";
 
 // Register the necessary components
@@ -17,6 +19,8 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
+  BarController,
+  BarElement,
   Title,
   Tooltip,
   Legend
@@ -60,7 +64,7 @@ const LineGraph = ({ newData }) => {
           <Line data={salaries} />
         </div>
         <div className="w-3/4 h-full  m-5">
-          <Line data={Jobs} />
+          <Bar data={Jobs} />
         </div>
       </div>
     </div>
